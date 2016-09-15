@@ -2,7 +2,11 @@
 
 namespace KanbanBundle\Form;
 
+use Symfony\Component\DomCrawler\Field\ChoiceFormField;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -15,11 +19,12 @@ class PostitType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('titre')
-            ->add('contenu')
+            ->add('titre',TextType::class)
+            ->add('contenu',TextType::class)
             ->add('dateC', 'date')
             ->add('dateF', 'date')
-            ->add('etat')
+            ->add('etat',ChoiceType::class,array('choices'=>array('Nouveau'=>0,'En cours'=>1,'Fait'=>2),'choices_as_values' => true))
+            ->add('enregistrer',SubmitType::class)
         ;
     }
     

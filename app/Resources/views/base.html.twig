@@ -4,7 +4,8 @@
         <meta charset="UTF-8" />
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}
-        <link rel="stylesheet" href="{{ asset('http://www.w3schools.com/lib/w3.css')}}">
+            <link rel="stylesheet" href="{{ asset('http://www.w3schools.com/lib/w3.css')}}">
+            <link rel="stylesheet" href="{{ asset('Resources/css/kanban.css')}}">
         {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
@@ -19,7 +20,7 @@
                     <div class="w3-card-2 w3-round w3-white">
                         <div class="w3-container">
                             <h4 class="w3-center">My Profile</h4>
-                            <p class="w3-center"><img src="img_avatar3.png" class="w3-circle" style="height:106px;width:106px" alt="Avatar"></p>
+                            <p class="w3-center"><img src="{{ '../Resources/images/img_avatar3.png' }}" class="w3-circle" style="height:106px;width:106px" alt="Avatar"></p>
                             <hr>
                             <p><i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i> Designer, UI</p>
                             <p><i class="fa fa-home fa-fw w3-margin-right w3-text-theme"></i> London, UK</p>

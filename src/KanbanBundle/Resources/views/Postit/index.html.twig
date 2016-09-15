@@ -4,4 +4,24 @@
 
 {% block body %}
 <h1>Welcome to the Postit:index page</h1>
+
+
+    {% for tache in taches %}
+
+        <div class="w3-card-4 w3-yellow postit">
+            <div class="postit-titre">
+                {{ tache.titre }}
+            </div>
+            <div class="postit-content">
+                {{ tache.contenu }}
+            </div>
+
+
+        </div>
+    {% endfor %}
+
+
+
+
+
 {% endblock %}
