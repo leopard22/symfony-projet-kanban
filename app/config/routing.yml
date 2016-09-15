@@ -1,0 +1,9 @@
+kanban:
+    resource: "@KanbanBundle/Resources/config/routing.yml"
+    prefix:   /kanban
+
+
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation

@@ -1,0 +1,15 @@
+kanban_homepage:
+    path:     /
+    defaults: { _controller: KanbanBundle:Default:index }
+
+list:
+    path:     /list
+    defaults: { _controller: KanbanBundle:Postit:list }
+
+edit:
+    path:     /edit
+    defaults: { _controller: KanbanBundle:Postit:edit }
+
+create:
+    path:     /create
+    defaults: { _controller: KanbanBundle:Postit:create }

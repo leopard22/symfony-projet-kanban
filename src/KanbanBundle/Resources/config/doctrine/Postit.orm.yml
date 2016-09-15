@@ -1,0 +1,25 @@
+KanbanBundle\Entity\Postit:
+    type: entity
+    table: null
+    repositoryClass: KanbanBundle\Repository\PostitRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        titre:
+            type: string
+            length: 255
+        contenu:
+            type: string
+            length: 255
+        dateC:
+            type: date
+        dateF:
+            type: date
+            nullable: true
+        etat:
+            type: integer
+    lifecycleCallbacks: {  }

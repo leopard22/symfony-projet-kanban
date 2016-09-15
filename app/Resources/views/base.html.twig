@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('http://www.w3schools.com/lib/w3.css')}}">
+        {% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+        <div class="w3-container w3-content">
+            <div class="w3-row">
+
+                <div class="w3-col l3 m4">
+
+                {% block aside_left %}
+                    <!-- Profile -->
+                    <div class="w3-card-2 w3-round w3-white">
+                        <div class="w3-container">
+                            <h4 class="w3-center">My Profile</h4>
+                            <p class="w3-center"><img src="img_avatar3.png" class="w3-circle" style="height:106px;width:106px" alt="Avatar"></p>
+                            <hr>
+                            <p><i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i> Designer, UI</p>
+                            <p><i class="fa fa-home fa-fw w3-margin-right w3-text-theme"></i> London, UK</p>
+                            <p><i class="fa fa-birthday-cake fa-fw w3-margin-right w3-text-theme"></i> April 1, 1988</p>
+                        </div>
+                    </div>
+
+                {% endblock %}
+                </div>
+                <div class="w3-col l9 m8">
+
+                {% block body %}{% endblock %}
+                </div>
+            </div>
+
+        </div>
+
+        <div class="w3-container w3-theme-d3 w3-padding-16">
+            {% block footer %}
+            footer
+            {% endblock %}
+        </div>
+
+
+
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>
