@@ -7,9 +7,13 @@ list:
     defaults: { _controller: KanbanBundle:Postit:list }
 
 edit:
-    path:     /edit
+    path:     /edit/{id}
     defaults: { _controller: KanbanBundle:Postit:edit }
 
 create:
     path:     /create
     defaults: { _controller: KanbanBundle:Postit:create }
+
+delete:
+    path:     /delete/{id}
+    defaults: { _controller: KanbanBundle:Postit:delete }

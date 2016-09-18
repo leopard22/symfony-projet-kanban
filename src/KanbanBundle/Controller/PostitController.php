@@ -18,10 +18,12 @@ class PostitController extends Controller
         ));
     }
 
-    public function editAction()
+    public function editAction($idPostit)
     {
+        $em = $this->getDoctrine()->getManager();
+        //$postIt =
 
-        return $this->render('KanbanBundle:Postit:edit.html.twig', array(
+        return $this->render('KanbanBundle:Postit:edit.html.twig', array('id'=>$idPostit
             // ...
         ));
     }
@@ -48,6 +50,15 @@ class PostitController extends Controller
         return $this->render('KanbanBundle:Postit:create.html.twig', array(
             'formPostit'=>$formPostit->createView()
         ));
+    }
+
+    public function deleteAcion($idPostit)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $postit = $em->getRepository('KanbanBundle:Postit')->find($idPostit);
+        $em->remove($postit);
+        $em->flush();
+        return $this->redirectToRoute('list');
     }
 
 }

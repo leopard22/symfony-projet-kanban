@@ -1,24 +1,37 @@
 {% extends "::base.html.twig" %}
 
-{% block title %}KanbanBundle:Postit:index{% endblock %}
+{% block title %}Liste {% endblock %}
 
 {% block body %}
-<h1>Welcome to the Postit:index page</h1>
+
+    <div class="w3-row">
+        <a class="w3-btn-floating-large w3-teal" href="{{ path('create') }}"><i class="fa fa-plus"></i> </a>
+    </div>
+
+    <div class="w3-col m4 w3-pale-yellow w3-leftbar w3-rightbar w3-border-grey">
+        {% for tache in taches %}
+
+            <div class="w3-card-4 w3-yellow postit">
+                <div class="postit-titre">
+                    {{ tache.titre }}
+                </div>
+                <div class="postit-content">
+                    {{ tache.contenu }}
+                </div>
 
 
-    {% for tache in taches %}
-
-        <div class="w3-card-4 w3-yellow postit">
-            <div class="postit-titre">
-                {{ tache.titre }}
             </div>
-            <div class="postit-content">
-                {{ tache.contenu }}
-            </div>
+        {% endfor %}
+    </div>
 
+    <div class="w3-col m4 w3-pale-blue w3-leftbar w3-rightbar w3-border-grey">
 
-        </div>
-    {% endfor %}
+    </div>
+
+    <div class="w3-col m4 w3-pale-green w3-leftbar w3-rightbar w3-border-grey">
+
+    </div>
+
 
 
 
