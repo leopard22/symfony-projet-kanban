@@ -1,5 +1,5 @@
 .postit{
-    width: 160px;
+    width: 190px;
     height: 110px;
     margin: 24px 0;
     padding: 16px;
@@ -10,4 +10,11 @@
 
 .postit-content{
 
+}
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
 }

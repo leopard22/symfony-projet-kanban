@@ -52,7 +52,7 @@ class PostitController extends Controller
         ));
     }
 
-    public function deleteAcion($idPostit)
+    public function deleteAction($idPostit)
     {
         $em = $this->getDoctrine()->getManager();
         $postit = $em->getRepository('KanbanBundle:Postit')->find($idPostit);

@@ -11,16 +11,15 @@
     <div class="w3-col m4 w3-pale-yellow w3-leftbar w3-rightbar w3-border-grey">
         {% for tache in taches %}
 
-            <div class="w3-card-4 w3-yellow postit">
-                <div class="postit-titre">
-                    {{ tache.titre }}
-                </div>
-                <div class="postit-content">
-                    {{ tache.contenu }}
+                <div class="w3-card-4 w3-yellow postit">
+                    <div class="postit-titre">
+                        {{ tache.titre }}  <a href="{{ path('delete',{'idPostit':tache.id}) }}"><i class="fa fa-trash"> </i> </a> <a href="{{ path('edit',{'idPostit':tache.id}) }}"> <i class="fa fa-edit"> </i></a>
+                    </div>
+                    <div class="postit-content">
+                        {{ tache.contenu }}
+                    </div>
                 </div>
 
-
-            </div>
         {% endfor %}
     </div>
 
