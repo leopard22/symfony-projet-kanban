@@ -61,4 +61,22 @@ class PostitController extends Controller
         return $this->redirectToRoute('list');
     }
 
+    public function etatAction($idPostit,$etat)
+    {
+
+        $em = $this->getDoctrine()->getManager();
+        $postit = $em->getRepository('KanbanBundle:Postit')->find($idPostit);
+
+        if(!$postit)
+        {
+            throw $this->createNotFoundException("cette tache n'existe pas ");
+        }else{
+            $postit->setEtat($etat);
+            $em->flush();
+        }
+
+
+        return $this->redirectToRoute('list');
+    }
+
 }

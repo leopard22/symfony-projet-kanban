@@ -17,3 +17,7 @@ create:
 delete:
     path:     /delete/{idPostit}
     defaults: { _controller: KanbanBundle:Postit:delete }
+
+etat:
+    path:    /etat/{idPostit}/{etat}
+    defaults: { _controller: KanbanBundle:Postit:etat }

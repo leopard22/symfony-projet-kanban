@@ -8,10 +8,8 @@
             <link rel="stylesheet" href="{{ asset('Resources/css/kanban.css')}}">
             <link rel="stylesheet" href="{{ asset('Resources/css/font-awesome.min.css')}}">
             <link rel="stylesheet" href="{{ asset('Resources/css/font-awesome.css')}}">
-            <link rel="stylesheet" href="{{ asset('Resources/css/font-awesome.css')}}">
-
-        {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        {% endblock %}
     </head>
     <body>
         <div class="w3-container">
@@ -50,6 +48,11 @@
 
 
 
-        {% block javascripts %}{% endblock %}
+        {% block javascripts %}
+
+            <script src='{{ asset("https://code.jquery.com/jquery-1.12.4.js") }}'></script>
+            <script src="{{ asset('https://code.jquery.com/ui/1.12.1/jquery-ui.js') }}"></script>
+            <script src="{{ asset('Resources/js/kanban.js') }}"></script>
+        {% endblock %}
     </body>
 </html>
