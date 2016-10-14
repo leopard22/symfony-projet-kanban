@@ -13,7 +13,7 @@
 {% if tache.etat == 0 %}
                 <div class="w3-card-4 w3-yellow postit">
                     <div class="postit-titre">
-                        {{ tache.titre }}  <a href="{{ path('delete',{'idPostit':tache.id}) }}"><i class="fa fa-trash"> </i> </a> <a href="{{ path('edit',{'idPostit':tache.id}) }}"> <i class="fa fa-edit"> </i></a>
+                        {{ tache.titre }}  <a href="{{ path('delete',{'idTache':tache.id}) }}"><i class="fa fa-trash"> </i> </a> <a href="{{ path('edit',{'idTache':tache.id}) }}"> <i class="fa fa-edit"> </i></a>
                     </div>
                     <div class="postit-content">
                         {{ tache.contenu }}
@@ -21,9 +21,9 @@
                         <div class="dropdown">
                             <i class="fa fa-pencil"></i>
                             <div class="dropdown-content">
-                                <a href="{{ path('etat',{'idPostit':tache.id,'etat':0}) }}"><div class="btn-etat"><i class="fa fa-thumbs-up fa-2x"></i> </div></a>
-                                <a href="{{ path('etat',{'idPostit':tache.id,'etat':1}) }}"><div class="btn-etat"><i class="fa fa-hand-o-right fa-2x"></i> </div></a>
-                                <a href="{{ path('etat',{'idPostit':tache.id,'etat':2}) }}"><div class="btn-etat"><i class="fa fa-thumbs-up fa-2x"></i> </div></a>
+                                <a href="{{ path('etat',{'idTache':tache.id,'etat':0}) }}"><div class="btn-etat"><i class="fa fa-thumbs-up fa-2x"></i> </div></a>
+                                <a href="{{ path('etat',{'idTache':tache.id,'etat':1}) }}"><div class="btn-etat"><i class="fa fa-hand-o-right fa-2x"></i> </div></a>
+                                <a href="{{ path('etat',{'idTache':tache.id,'etat':2}) }}"><div class="btn-etat"><i class="fa fa-thumbs-up fa-2x"></i> </div></a>
                             </div>
                         </div>
                     </div>
@@ -37,16 +37,16 @@
             {% if tache.etat == 1 %}
                 <div class="w3-card-4 w3-yellow postit">
                     <div class="postit-titre">
-                        {{ tache.titre }}  <a href="{{ path('delete',{'idPostit':tache.id}) }}"><i class="fa fa-trash"> </i> </a> <a href="{{ path('edit',{'idPostit':tache.id}) }}"> <i class="fa fa-edit"> </i></a>
+                        {{ tache.titre }}  <a href="{{ path('delete',{'idTache':tache.id}) }}"><i class="fa fa-trash"> </i> </a> <a href="{{ path('edit',{'idTache':tache.id}) }}"> <i class="fa fa-edit"> </i></a>
                     </div>
                     <div class="postit-content">
                         {{ tache.contenu }}
                         <div class="dropdown">
                             <i class="fa fa-pencil"></i>
                             <div class="dropdown-content">
-                                <a href="{{ path('etat',{'idPostit':tache.id,'etat':0}) }}"><div class="btn-etat"><i class="fa fa-thumbs-up fa-2x"></i></div> </a>
-                                <a href="{{ path('etat',{'idPostit':tache.id,'etat':1}) }}"><div class="btn-etat"><i class="fa fa-hand-o-right fa-2x"></i></div> </a>
-                                <a href="{{ path('etat',{'idPostit':tache.id,'etat':2}) }}"><div class="btn-etat"><i class="fa fa-thumbs-up fa-2x"></i> </div></a>
+                                <a href="{{ path('etat',{'idTache':tache.id,'etat':0}) }}"><div class="btn-etat"><i class="fa fa-thumbs-up fa-2x"></i></div> </a>
+                                <a href="{{ path('etat',{'idTache':tache.id,'etat':1}) }}"><div class="btn-etat"><i class="fa fa-hand-o-right fa-2x"></i></div> </a>
+                                <a href="{{ path('etat',{'idTache':tache.id,'etat':2}) }}"><div class="btn-etat"><i class="fa fa-thumbs-up fa-2x"></i> </div></a>
                             </div>
                         </div>
                     </div>
@@ -60,7 +60,7 @@
             {% if tache.etat == 2 %}
                 <div class="w3-card-4 w3-yellow postit">
                     <div class="postit-titre">
-                        {{ tache.titre }}  <a href="{{ path('delete',{'idPostit':tache.id}) }}"><i class="fa fa-trash"> </i> </a> {#<a href="{{ path('edit',{'idPostit':tache.id}) }}"> <i class="fa fa-edit"> </i></a>#}
+                        {{ tache.titre }}  <a href="{{ path('delete',{'idTache':tache.id}) }}"><i class="fa fa-trash"> </i> </a> {#<a href="{{ path('edit',{'idTache':tache.id}) }}"> <i class="fa fa-edit"> </i></a>#}
                     </div>
                     <div class="postit-content">
                         {{ tache.contenu }}
@@ -68,9 +68,9 @@
                         <div class="dropdown">
                             {#<i class="fa fa-pencil"></i>#}
                             <div class="dropdown-content">
-                                <a href="{{ path('etat',{'idPostit':tache.id,'etat':0}) }}"><div class="btn-etat"><i class="fa fa-thumbs-up fa-2x"></i> </div></a>
-                                <a href="{{ path('etat',{'idPostit':tache.id,'etat':1}) }}"><div class="btn-etat"><i class="fa fa-hand-o-right fa-2x"></i> </div></a>
-                                <a href="{{ path('etat',{'idPostit':tache.id,'etat':2}) }}"><div class="btn-etat"><i class="fa fa-thumbs-up fa-2x"></i> </div></a>
+                                <a href="{{ path('etat',{'idTache':tache.id,'etat':0}) }}"><div class="btn-etat"><i class="fa fa-thumbs-up fa-2x"></i> </div></a>
+                                <a href="{{ path('etat',{'idTache':tache.id,'etat':1}) }}"><div class="btn-etat"><i class="fa fa-hand-o-right fa-2x"></i> </div></a>
+                                <a href="{{ path('etat',{'idTache':tache.id,'etat':2}) }}"><div class="btn-etat"><i class="fa fa-thumbs-up fa-2x"></i> </div></a>
                             </div>
                         </div>
                     </div>

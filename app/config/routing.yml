@@ -1,7 +1,10 @@
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+    prefix:    /kanban
+
 kanban:
     resource: "@KanbanBundle/Resources/config/routing.yml"
     prefix:   /kanban
-
 
 
 app:

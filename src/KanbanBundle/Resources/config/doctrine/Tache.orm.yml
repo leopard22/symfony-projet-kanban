@@ -1,0 +1,23 @@
+KanbanBundle\Entity\Tache:
+    type: entity
+    table: null
+    repositoryClass: KanbanBundle\Repository\TacheRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        titre:
+            type: string
+            length: 255
+        contenu:
+            type: text
+        dateC:
+            type: datetime
+        dateF:
+            type: datetime
+        etat:
+            type: integer
+    lifecycleCallbacks: {  }

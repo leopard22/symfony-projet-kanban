@@ -4,20 +4,22 @@ kanban_homepage:
 
 list:
     path:     /list
-    defaults: { _controller: KanbanBundle:Postit:list }
+    defaults: { _controller: KanbanBundle:Tache:list }
 
 edit:
-    path:     /edit/{idPostit}
-    defaults: { _controller: KanbanBundle:Postit:edit }
+    path:     /edit/{idTache}
+    defaults: { _controller: KanbanBundle:Tache:edit }
 
 create:
     path:     /create
-    defaults: { _controller: KanbanBundle:Postit:create }
+    defaults: { _controller: KanbanBundle:Tache:create }
 
 delete:
-    path:     /delete/{idPostit}
-    defaults: { _controller: KanbanBundle:Postit:delete }
+    path:     /delete/{idTache}
+    defaults: { _controller: KanbanBundle:Tache:delete }
 
 etat:
-    path:    /etat/{idPostit}/{etat}
-    defaults: { _controller: KanbanBundle:Postit:etat }
+    path:    /etat/{idTache}/{etat}
+    defaults: { _controller: KanbanBundle:Tache:etat }
+
+

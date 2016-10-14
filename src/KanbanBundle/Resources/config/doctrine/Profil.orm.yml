@@ -1,0 +1,23 @@
+KanbanBundle\Entity\Profil:
+    type: entity
+    table: fos_user
+    repositoryClass: KanbanBundle\Repository\ProfilRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nom:
+            type: string
+            length: 255
+        prenom:
+            type: string
+            length: 255
+        sexe:
+            type: integer
+        dateNaissance:
+            type: datetime
+            column: date_naissance
+    lifecycleCallbacks: {  }
